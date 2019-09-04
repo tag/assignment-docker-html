@@ -15,7 +15,7 @@ Choose either, but submit the link to the repo you use.
 Using the Docker config files in this repo, launch Docker and view your new web site. Practice this, as we'll be doing it often.
 
 ## Using the command line
-As a reminder use `cd` (**c**hange **d**irectory) to navigate, and `dir` (Windows) / `ls` (everything else) to view directory listings.
+As a reminder, use `cd` (**c**hange **d**irectory) to navigate, and `dir` (Windows) / `ls` (everything else) to view directory listings.
 
 ## Using Docker
 When in your project directory on the command line, use `docker-compose build` to build this docker image.
@@ -31,10 +31,10 @@ The `volumes` command in `docker-compose.yml` maps the your folder `app` to the
 container's `\srv\app\` folder. Changes made in one place will be made in the
  other. (Some students running Windows 7 have had issues with this step. If you're running Windows 7, but no files are showing up, try removing the `volumes` section.)
 
- The key combo `ctrl-C` will kill the container.
+The key combo `ctrl-C` will kill the container.
 
 ## Add a `.dockerignore` File
-Read the following [explaition of the `.dockerignore` file](https://blog.codeship.com/leveraging-the-dockerignore-file-to-create-smaller-images/)
+Read the following [explanation of the `.dockerignore` file](https://blog.codeship.com/leveraging-the-dockerignore-file-to-create-smaller-images/)
 Create a `.dockerignore` file with at least the following. Be able to explain what each line does.
 
 ```
@@ -43,9 +43,22 @@ docker-compose.yml
 *.md
 ```
 
+## Enter your container
+
+If you wish, you may enter your running container via the command line. First, you'll need to discover the hash of your container. `docker ps` lists all active containers. Copy the hash from your container, and replace it in the following command:
+
+```bash
+docker exec -it c0ee14f0c047 bash
+```
+
+The `-it` flag allows you to run an interactive `bash` session. `bash` is the name of the command line shell available in Docker images.
+
+Once inside, you can `ls` and `cd` to poke around. Try to find your document root! When finished, exit `bash` with the `exit` command.
+
+
 # Make the table sortable.
 
-There are many public "sort table" scripts. For simplicity, I recommend using [this one](http://tristen.ca/tablesort/demo/). I've uploaded a full video showing how to do this. ("[04 Adding a sort table script.mp4](https://iu.box.com/s/9g2m3r35ut3oj5anjfrfojyngxy7b8fz)") If you use this script, you'll need to give your table a unique ID.
+There are many public "sort table" scripts. For simplicity, I recommend using [this one](http://tristen.ca/tablesort/demo/). I've uploaded a short video showing how to do this. ("[03 Adding a sort table script.mp4](https://iu.mediaspace.kaltura.com/media/03+Adding+a+sort+table+script/1_9cd5rcdg)") If you use this script, you'll need to give your table a unique ID.
 
 ## A simple Javascript
 
