@@ -16,6 +16,22 @@ docker-compose.yml
 *.md
 ```
 
+## Using Docker
+When in this directory, use `docker-compose build` to build this docker image.
+
+After building, use `docker-compose up` from the project directory to run the container.
+
+After running this image container, the web page should be visible at http://localhost:8080/ (If you're using Docker Tools because you're on Windows 7, it may be slightly different.)
+
+The file `docker-compose.yml` maps the container's port 80 (default web port) to
+the host's (that's your machine's) port 8080 with the `ports` command.
+
+The `volumes` command in `docker-compose.yml` maps the your folder `app` to the
+container's `\srv\app\` folder. Changes made in one place will be made in the
+ other.
+
+ The key combo `ctrl-C` will kill the container.
+
 ## A simple Javascript
 Add a script to your project to make the table sortable (on your page with the table).
 
