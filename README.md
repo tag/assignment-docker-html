@@ -2,7 +2,7 @@
 # Overview
 Using the same content you submitted for Individual HW#1 (not necessarily the same repository), update your pages to (1)  run as a Docker container and (2) include sortable tables.
 
-_**Link directly to the table page. **_ Your submission URL should look something like: `https://github.com/iu-msis/ds-hw1-[username]/public/[table_file.html]`
+_**Link directly to the table page.**_ Your submission URL should look something like: `https://github.com/iu-msis/ds-hw1-[username]/public/[table_file.html]`
 
 ### Which repository?
 You can copy the Docker config files from this repo to your old repository, or copy your `app` folder from your previous repo into this one, making any improvements you need. (Yes, I know this isn't the best way to do version control.)
@@ -53,10 +53,10 @@ Adding this script should be simple. Read the documentation of your chosen scrip
 
 You may use any table sort script on the web. Here are two to get your search started:
 
-* http://tristen.ca/tablesort/demo/
+* http://tristen.ca/tablesort/demo/ (This one is used in the video linked above)
 * https://github.hubspot.com/sortable/docs/welcome/ (I think I like this one better.)
 
-The ideal script "just works", perhaps with simply adding only a class to your table.
+The ideal script "just works", perhaps with simply adding only a class to your table. The less we have to configure in our code to connect to the library, the better off we are.
 
 # Submit
-Submit the URL to your GitHub repository on Canvas. _**Link directly to the table page. **_ It will help if you name that file `table.html`.
+Submit the URL to your GitHub repository on Canvas. _**Link directly to the table page.**_ It will help if you name that file `table.html`.
