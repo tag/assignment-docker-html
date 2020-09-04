@@ -2,14 +2,18 @@
 # Overview
 Using the same content you submitted for Individual HW#1 (not necessarily the same repository), update your pages to (1)  run as a Docker container and (2) include sortable tables.
 
-_**Link directly to the table page.**_ Your submission URL should look something like: `https://github.com/iu-msis/ds-hw1-[username]/public/[table_file.html]`
+_**Link directly to the table page.**_ Your submission URL should look something like: `https://github.com/iu-msis/2-simple-docker-js-[username]/public/[table_file.html]`
 
 ### Which repository?
-You can copy the Docker config files from this repo to your old repository, or copy your `app` folder from your previous repo into this one, making any improvements you need. (Yes, I know this isn't the best way to do version control.)
+You can copy the Docker config files from this repo to your old repository, or copy your `app` folder from your previous repo into this one, making any improvements you need. _(Yes, I know this isn't the best way to do version control.)_
 
 Make sure that you don't accidentally copy the `.git` folder over when moving files.
 
 Choose either, but submit the link to the repo you use.
+
+### Folder structure
+
+Use an `app` folder; put your `public` folder inside the app folder.
 
 # Make a Docker container, use it
 Using the Docker config files in this repo, launch Docker and view your new web site. Practice this, as we'll be doing it often.
@@ -18,20 +22,15 @@ Using the Docker config files in this repo, launch Docker and view your new web 
 As a reminder, use `cd` (**c**hange **d**irectory) to navigate, and `dir` (Windows) / `ls` (everything else) to view directory listings.
 
 ## Using Docker
-When in your project directory on the command line, use `docker-compose build` to build this docker image.
+When in your project directory on the command line, you can use `docker-compose build` to build this docker image.
 
-After building, use `docker-compose up` from the project directory to run the container.
+After building, use `docker-compose up` from the project directory to run the container. (`ctrl-C` is one way to quit a running container.)
 
-After running this image container, the web page should be visible at http://localhost:8080/ (If you're using Docker Tools because you're on Windows 7, the URL may be slightly different, perhaps http://192.168.99.100:8080/)
+After running this image container, the web page should be visible at http://localhost:8080/
 
-The file `docker-compose.yml` maps the container's port 80 (default web port) to
-the host's (that's your machine's) port 8080 with the `ports` command.
+The provided file `docker-compose.yml` maps the container's port 80 (default web port) to the host machine's (your machine's) port 8080 with the `ports` command.
 
-The `volumes` command in `docker-compose.yml` maps the your folder `app` to the
-container's `\srv\app\` folder. Changes made in one place will be made in the
- other. (Some students running Windows 7 have had issues with this step. If you're running Windows 7, but no files are showing up, try removing the `volumes` section.)
-
-The key combo `ctrl-C` will kill the container.
+The `volumes` command in `docker-compose.yml` maps your repository folder `app` to the container's `\srv\app\` folder. Changes made in one place will be made in the other. This means when you make changes to your HTML, CSS, or Javascript files that you won't have to rebuild your container.
 
 ## Add a `.dockerignore` File
 Read the following [explanation of the `.dockerignore` file](https://blog.codeship.com/leveraging-the-dockerignore-file-to-create-smaller-images/)
@@ -53,7 +52,7 @@ docker exec -it c0ee14f0c047 bash
 
 The `-it` flag allows you to run an interactive `bash` session. `bash` is the name of the command line shell available in Docker images.
 
-Once inside, you can `ls` and `cd` to poke around. Try to find your document root! When finished, exit `bash` with the `exit` command.
+Once inside, you can `ls` and `cd` to poke around. Try to find your document root! (Hint: it's where we copied files to.) When finished, exit `bash` with the `exit` command.
 
 
 # Make the table sortable.
@@ -71,5 +70,14 @@ You may use any table sort script on the web. Here are two to get your search st
 
 The ideal script "just works", perhaps with simply adding only a class to your table. The less we have to configure in our code to connect to the library, the better off we are.
 
+## No errors
+Check the browser console before submitting to make sure you don't have any Javascript errors.
+
+## Sort with style
+Add any necessary CSS to make the sorting look good. (e.g., up/down arrows on the column headers). How you do this will depend on which table sort script you use. Whatever solution you pick, there should be some changes to your CSS file.
+
+# Correct any errors
+If you missed parts of HW#1, or receiving feedback telling you to change something, fix it now. Mention your change(s) in the submission comments on Canvas.
+
 # Submit
-Submit the URL to your GitHub repository on Canvas. _**Link directly to the table page.**_ It will help if you name that file `table.html`.
+Submit the URL to your GitHub repository on Canvas. _**Link directly to the table page.**_ It will help if you name that file `table.html`. (Remember you may need to fix your navbar links too.)
