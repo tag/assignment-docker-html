@@ -80,4 +80,4 @@ Add any necessary CSS to make the sorting look good. (e.g., up/down arrows on th
 If you missed parts of HW#1, or receiving feedback telling you to change something, fix it now. Mention your change(s) in the submission comments on Canvas.
 
 # Submit
-Submit the URL to your GitHub repository on Canvas. _**Link directly to the table page.**_ It will help if you name that file `table.html`. (Remember you may need to fix your navbar links too.)
+Submit to Canvas the GitHub URL that points directly to the table page in your repository. _**Link directly to the table page.**_ It will help if you name that file `table.html`. (Remember you may need to fix your navbar links too.)
